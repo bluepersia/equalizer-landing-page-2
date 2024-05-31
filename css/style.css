@@ -145,7 +145,7 @@ p
 }
 
 
-#main {
+#main__inner {
     background-color: var(--c-Black);
     background-image: url(../assets/bg-pattern-2.svg);
     background-repeat: no-repeat;
@@ -159,11 +159,15 @@ p
     margin-right: auto;
     position: relative;
     top:-6.125em;
+    max-width: 312px;
 }
 
 #main__content {
     background-color: var(--c-Orange);
     padding: 3em 2.25em; 
+    max-width: 446px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #main__price span {
@@ -186,6 +190,7 @@ p
 
 #footer__text {
     margin-bottom: 4em;
+    max-width: 366px;
 }
 
 
@@ -238,17 +243,22 @@ p
     #header 
     {
         background-image: url(../assets/bg-main-tablet.png), url(../assets/bg-pattern-1.svg);
-        background-position: bottom -12em right -4em, top right;
+        background-position: bottom -12em right -4em, top right -2.5em;
         padding: 3.38em 5.2% 0;
     }
 
     #hero {
         padding: 5.27em 0 13.6em;
     }
+
     #main {
+        padding: 0 5.2%;
+    }
+    #main__inner {
         padding: 0 3.5em;
         display: grid;
         grid-template-columns: auto auto;
+        border-radius: 12px;
         
     }
 
@@ -270,6 +280,7 @@ p
         border-radius: 12px;
         height: fit-content;
         padding: 2.66em;
+        margin-right: 0;
     }
 
     #footer {
@@ -293,5 +304,60 @@ p
     #footer__social {
         grid-column: 2 / -1;
         grid-row: 2 / 3;
+    }
+}
+
+
+@media (min-width:1440px)
+{
+    #header {
+        background-image: url(../assets/bg-main-desktop.png), url(../assets/bg-pattern-1.svg);
+        background-position: bottom -44em right -4em, top right;
+        padding: 3.1em 11.4% 0;
+    }
+
+    #hero {
+        max-width: 1000px;
+        padding: 6.35em 0 16em;
+    }
+
+    #main {
+        padding: 0 11.4%;
+    }
+
+    #main__img {
+        width: 34%;
+    }
+
+    #main__content 
+    {
+        width: 48.8%;
+        padding: 2.9em 2.7em;
+    }
+
+    #footer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        padding: 10em 11.4% 4.55em;
+    }
+
+    #footer__logo 
+    {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    #footer__text {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        margin-top: 0;
+    }
+
+    #footer__social 
+    {
+        grid-column: 3 / 4;
+        grid-row: 1;
+        align-self: center;
+        justify-self: end;
     }
 }
