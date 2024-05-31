@@ -1,0 +1,24 @@
+:root 
+{
+    --c-Blue:#66E2DC;
+    --c-Orange:#FA7453;
+    --c-Yellow:#FFB964;
+    --c-White:#FCFAF9;
+    --c-Black:#191826;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child {
+    margin-top: 0;
+}
+
+* :last-child {
+    margin-bottom: 0;
+}
