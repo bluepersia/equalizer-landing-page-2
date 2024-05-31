@@ -125,3 +125,239 @@ p
         font-size: 2rem;
     }
 }
+
+
+/* Layout */
+
+#header 
+{
+    padding: 2.5em 6.4%;
+    background-image: url(../assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: bottom right -14em;
+}
+
+
+#hero
+{
+    padding:4em 0 10em;
+    max-width: 520px;
+}
+
+
+#main__inner {
+    background-color: var(--c-Black);
+    background-image: url(../assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#main__img {
+    display: block;
+    width: 55.4%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top:-6.125em;
+    max-width: 312px;
+}
+
+#main__content {
+    background-color: var(--c-Orange);
+    padding: 3em 2.25em; 
+    max-width: 446px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main__price span {
+    margin-right: .24em;
+}
+
+#main__btns {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+}
+
+#footer {
+    padding: 4em 6.4% 5em;
+}
+
+#footer__logo {
+    margin-bottom: 1.7em;
+}
+
+#footer__text {
+    margin-bottom: 4em;
+    max-width: 366px;
+}
+
+
+.social {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+}
+
+.social__item {
+    cursor: pointer;
+}
+
+.social__item path {
+    transition: fill 300ms;
+}
+
+.social__item:hover path {
+    fill: var(--c-Orange)
+}
+
+
+/* Components Layout */
+
+.logo 
+{
+    width: 146px;
+}
+
+.btn {
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+
+.btn--1:hover {
+    background-color: var(--c-Blue);
+}
+
+.btn--2:hover
+{
+    background-color: var(--c-Yellow);
+}
+
+
+@media (min-width: 768px)
+{
+    #header 
+    {
+        background-image: url(../assets/bg-main-tablet.png), url(../assets/bg-pattern-1.svg);
+        background-position: bottom -12em right -4em, top right -2.5em;
+        padding: 3.38em 5.2% 0;
+    }
+
+    #hero {
+        padding: 5.27em 0 13.6em;
+    }
+
+    #main {
+        padding: 0 5.2%;
+    }
+    #main__inner {
+        padding: 0 3.5em;
+        display: grid;
+        grid-template-columns: auto auto;
+        border-radius: 12px;
+        
+    }
+
+    #main__img {
+        width: 47.2%;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    #main__content {
+        position: relative;
+        top:8.2em;
+        width: 69.7%;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: end;
+        border-radius: 12px;
+        height: fit-content;
+        padding: 2.66em;
+        margin-right: 0;
+    }
+
+    #footer {
+        padding: 5.1em 5.2% 4.72em;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        align-items: start;
+    }
+
+    #footer__logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #footer__text {
+        grid-column:  1 / 2;
+        grid-row: 2 / 3;
+        margin-bottom: 0;
+    }
+
+    #footer__social {
+        grid-column: 2 / -1;
+        grid-row: 2 / 3;
+    }
+}
+
+
+@media (min-width:1440px)
+{
+    #header {
+        background-image: url(../assets/bg-main-desktop.png), url(../assets/bg-pattern-1.svg);
+        background-position: bottom -44em right -4em, top right;
+        padding: 3.1em 11.4% 0;
+    }
+
+    #hero {
+        max-width: 1000px;
+        padding: 6.35em 0 16em;
+    }
+
+    #main {
+        padding: 0 11.4%;
+    }
+
+    #main__img {
+        width: 34%;
+    }
+
+    #main__content 
+    {
+        width: 48.8%;
+        padding: 2.9em 2.7em;
+    }
+
+    #footer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        padding: 10em 11.4% 4.55em;
+    }
+
+    #footer__logo 
+    {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    #footer__text {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        margin-top: 0;
+    }
+
+    #footer__social 
+    {
+        grid-column: 3 / 4;
+        grid-row: 1;
+        align-self: center;
+        justify-self: end;
+    }
+}
